@@ -88,14 +88,18 @@ def order_options():
         print("Sweet crepe? Waffle? Lavacake? Too many options!! Can't help there..")
     else:
         print("Oh you typed something that either doesn't make sense, or I wasn't programmed to think...better luck next time!")
+        order_options()
 
 def make_dinner_option():
     print("Nice! Here are the instructions! First, figure out what you want to cook! Once ready type yes: ")
     ready = input("Are you ready? ")
     chef = input("Who is going to be the chef? ")
     sou_chef = input("Who is going to be the sous chef? ")
+    print("Debug: Inputs received - Ready: {}, Chef: {}, Sous Chef: {}".format(ready, chef, sou_chef))
+    
     print("Ok! Let's get started! " + chef + " I hope you have some cooking experience because you have to run this kitchen!")
     print(sou_chef + " You better listen to " + chef + "...")
+    print("Debug: After chef and sous_chef statements")
     print("Now, we have to do this in a fun way...choose your aprons...and that only you should wear! Have fun ;)")
 
 def other_options():
@@ -128,3 +132,8 @@ save_to_file(couples_list, file_name)
 
 eatout(hungry)
 save_to_file(couples_list, file_name)
+
+# Additional print statement
+print("Thank you for using the Date Night script! Press Enter to exit.")
+# Wait for user to press Enter before exiting
+input()
